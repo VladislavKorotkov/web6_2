@@ -1,11 +1,9 @@
 package org.example;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.example.entities.PersonEntity;
 import org.example.marshalling.PersonXML;
 import org.hibernate.Session;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -15,9 +13,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-class JAXBAPI {
-    static PersonEntity executeXML(String filename, Session session) throws IOException, JAXBException {
+public class JAXBAPI {
+    public static PersonEntity executeXML(String filename, Session session) throws IOException, JAXBException {
         PersonXML personXML = getQuery(filename);
+
         switch (personXML.getQtype()) {
             case CREATE:
                 create(personXML.getEntity(), session);
@@ -34,7 +33,7 @@ class JAXBAPI {
         return null;
     }
 
-    static PersonXML getQuery(String filename) throws IOException, JAXBException {
+    public static PersonXML getQuery(String filename) throws IOException, JAXBException {
         StringBuilder strbldr = new StringBuilder();
         ArrayList<String> lines = (ArrayList<String>) Files.readAllLines(Paths.get(filename), StandardCharsets.UTF_8);
         for (String line : lines) {
@@ -76,7 +75,7 @@ class JAXBAPI {
         session.getTransaction().commit();
     }
 
-    static void addFromJson(@SuppressWarnings("SameParameterValue") String filename, Session session) throws IOException {
+    public static void addFromJson(@SuppressWarnings("SameParameterValue") String filename, Session session) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (Reader reader = new FileReader(filename)) {
             PersonEntity personEntity = gson.fromJson(reader, PersonEntity.class);
@@ -84,11 +83,13 @@ class JAXBAPI {
         }
     }
 
-    static void dumpToJson(@SuppressWarnings("SameParameterValue") String filename, Session session, @SuppressWarnings("SameParameterValue") String ID) throws IOException {
+    public static void dumpToJson(@SuppressWarnings("SameParameterValue") String filename, Session session, @SuppressWarnings("SameParameterValue") String ID) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         PersonEntity personEntity = session.find(PersonEntity.class, ID);
         try (FileWriter writer = new FileWriter(filename)) {
             gson.toJson(personEntity, writer);
         }
     }
+
+
 }

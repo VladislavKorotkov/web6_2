@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personXML>
+    <id>1</id>
+    <surname>Korotkov</surname>
+    <forename>Vladislav</forename>
+    <patronymic>Sergeevich</patronymic>
+    <dob>2004-02-04</dob>
+    <sex>1</sex>
+    <passportSeries>BM129313</passportSeries>
+    <passportNumber>X1231m1111231209431</passportNumber>
+    <city>Minsk</city>
+    <address>Yakuba Kolasa 28b</address>
+    <phoneHome>210-93-42</phoneHome>
+    <phoneMobile>+375292909202</phoneMobile>
+    <citizenship>yes</citizenship>
+    <dutyBound>23</dutyBound>
+    <qtype>CREATE</qtype>
+</personXML>

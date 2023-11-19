@@ -1,0 +1,15 @@
+{
+  "id": "2",
+  "surname": "Korotkov",
+  "forename": "Vladislav",
+  "patronymic": "Sergeevich",
+  "sex": 1,
+  "passportSeries": "BM129313",
+  "passportNumber": "X1231m1111231209431",
+  "city": "Minsk",
+  "address": "Yakuba Kolasa 28b",
+  "phoneHome": "210-93-42",
+  "phoneMobile": "+375292909202",
+  "citizenship": "yes",
+  "dutyBound": 23
+}

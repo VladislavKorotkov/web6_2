@@ -24,10 +24,10 @@
             <column name="sex" sql-type="smallint"/>
         </property>
         <property name="passportSeries">
-            <column name="passport_series" sql-type="varchar(45)" length="45"/>
+            <column name="passportSeries" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="passportNumber">
-            <column name="passport_number" sql-type="varchar(45)" length="45"/>
+            <column name="passportNumber" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="city">
             <column name="city" sql-type="varchar(45)" length="45"/>
@@ -36,16 +36,16 @@
             <column name="address" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="phoneHome">
-            <column name="phone_home" sql-type="varchar(45)" length="45"/>
+            <column name="phoneHome" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="phoneMobile">
-            <column name="phone_mobile" sql-type="varchar(45)" length="45"/>
+            <column name="phoneMobile" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="citizenship">
             <column name="citizenship" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="dutyBound">
-            <column name="duty_bound" sql-type="smallint"/>
+            <column name="dutyBound" sql-type="smallint"/>
         </property>
     </class>
 </hibernate-mapping>

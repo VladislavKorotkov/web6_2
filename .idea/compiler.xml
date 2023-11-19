@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="web6_2" options="--add-modules java.sql" />
+      <module name="web6_2" options="" />
     </option>
   </component>
 </project>

@@ -83,7 +83,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "passport_series", nullable = false, length = 45)
+    @Column(name = "passportSeries", nullable = false, length = 45)
     public String getPassportSeries() {
         return passportSeries;
     }
@@ -93,7 +93,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "passport_number", nullable = false, length = 45)
+    @Column(name = "passportNumber", nullable = false, length = 45)
     public String getPassportNumber() {
         return passportNumber;
     }
@@ -123,7 +123,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "phone_home", length = 45)
+    @Column(name = "phoneHome", length = 45)
     public String getPhoneHome() {
         return phoneHome;
     }
@@ -133,7 +133,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "phone_mobile", length = 45)
+    @Column(name = "phoneMobile", length = 45)
     public String getPhoneMobile() {
         return phoneMobile;
     }
@@ -153,7 +153,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "duty_bound", nullable = false)
+    @Column(name = "dutyBound", nullable = false)
     public byte getDutyBound() {
         return dutyBound;
     }
